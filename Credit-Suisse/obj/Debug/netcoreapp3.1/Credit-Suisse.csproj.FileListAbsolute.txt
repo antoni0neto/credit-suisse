@@ -1,2 +1,0 @@
-C:\dev\credt-suisse\Credit-Suisse\Credit-Suisse\obj\Debug\netcoreapp3.1\Credit-Suisse.csprojAssemblyReference.cache
-C:\dev\credt-suisse\Credit-Suisse\Credit-Suisse\obj\Debug\netcoreapp3.1\Credit-Suisse.RazorAssemblyInfo.cache
