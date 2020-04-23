@@ -1,0 +1,18 @@
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Business\bin\Debug\netcoreapp2.2\DevIO.Business.deps.json
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Business\bin\Debug\netcoreapp2.2\DevIO.Business.dll
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Business\bin\Debug\netcoreapp2.2\DevIO.Business.pdb
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.csprojAssemblyReference.cache
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.csproj.CoreCompileInputs.cache
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.AssemblyInfoInputs.cache
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.AssemblyInfo.cs
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.dll
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.pdb
+C:\dev\Credit-Suisse\src\DevIO.Business\bin\Debug\netcoreapp2.2\DevIO.Business.deps.json
+C:\dev\Credit-Suisse\src\DevIO.Business\bin\Debug\netcoreapp2.2\DevIO.Business.dll
+C:\dev\Credit-Suisse\src\DevIO.Business\bin\Debug\netcoreapp2.2\DevIO.Business.pdb
+C:\dev\Credit-Suisse\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.csprojAssemblyReference.cache
+C:\dev\Credit-Suisse\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.csproj.CoreCompileInputs.cache
+C:\dev\Credit-Suisse\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.AssemblyInfoInputs.cache
+C:\dev\Credit-Suisse\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.AssemblyInfo.cs
+C:\dev\Credit-Suisse\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.dll
+C:\dev\Credit-Suisse\src\DevIO.Business\obj\Debug\netcoreapp2.2\DevIO.Business.pdb

@@ -1,0 +1,24 @@
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Data.deps.json
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Data.dll
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Data.pdb
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Business.dll
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Business.pdb
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.csprojAssemblyReference.cache
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.csproj.CoreCompileInputs.cache
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.AssemblyInfoInputs.cache
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.AssemblyInfo.cs
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.csproj.CopyComplete
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.dll
+D:\solutionCloud\Solution Cloud\Cursos\REST com ASP.NET Core WebApi\Materiais\MinhaAPISemAutenticacao\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.pdb
+C:\dev\Credit-Suisse\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Data.deps.json
+C:\dev\Credit-Suisse\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Data.dll
+C:\dev\Credit-Suisse\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Data.pdb
+C:\dev\Credit-Suisse\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Business.dll
+C:\dev\Credit-Suisse\src\DevIO.Data\bin\Debug\netcoreapp2.2\DevIO.Business.pdb
+C:\dev\Credit-Suisse\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.csprojAssemblyReference.cache
+C:\dev\Credit-Suisse\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.csproj.CoreCompileInputs.cache
+C:\dev\Credit-Suisse\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.AssemblyInfoInputs.cache
+C:\dev\Credit-Suisse\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.AssemblyInfo.cs
+C:\dev\Credit-Suisse\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.csproj.CopyComplete
+C:\dev\Credit-Suisse\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.dll
+C:\dev\Credit-Suisse\src\DevIO.Data\obj\Debug\netcoreapp2.2\DevIO.Data.pdb
