@@ -14,6 +14,7 @@ namespace DevIO.Api.Configuration
             services.AddScoped<MyDbContext>();
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
             services.AddScoped<IFornecedorRepository, FornecedorRepository>();
+            services.AddScoped<ITradeRepository, TradeRepository>();
             services.AddScoped<IEnderecoRepository, EnderecoRepository>();
 
             services.AddScoped<INotifier, Notifier>();

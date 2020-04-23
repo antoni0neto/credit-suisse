@@ -22,12 +22,12 @@ namespace DevIO.Business.Services
 
         public async Task<bool> Adicionar(Fornecedor fornecedor)
         {
-            if (!ExecutarValidacao(new FornecedorValidation(), fornecedor) 
-                || !ExecutarValidacao(new EnderecoValidation(), fornecedor.Endereco)) return false;
+            if (!PerformValidation(new FornecedorValidation(), fornecedor) 
+                || !PerformValidation(new EnderecoValidation(), fornecedor.Endereco)) return false;
 
             if (_fornecedorRepository.Search(f => f.Documento == fornecedor.Documento).Result.Any())
             {
-                Notificar("Já existe um fornecedor com este documento informado.");
+                Notify("Já existe um fornecedor com este documento informado.");
                 return false;
             }
 
@@ -37,11 +37,11 @@ namespace DevIO.Business.Services
 
         public async Task<bool> Atualizar(Fornecedor fornecedor)
         {
-            if (!ExecutarValidacao(new FornecedorValidation(), fornecedor)) return false;
+            if (!PerformValidation(new FornecedorValidation(), fornecedor)) return false;
 
             if (_fornecedorRepository.Search(f => f.Documento == fornecedor.Documento && f.Id != fornecedor.Id).Result.Any())
             {
-                Notificar("Já existe um fornecedor com este documento infomado.");
+                Notify("Já existe um fornecedor com este documento infomado.");
                 return false;
             }
 
@@ -51,7 +51,7 @@ namespace DevIO.Business.Services
 
         public async Task AtualizarEndereco(Endereco endereco)
         {
-            if (!ExecutarValidacao(new EnderecoValidation(), endereco)) return;
+            if (!PerformValidation(new EnderecoValidation(), endereco)) return;
 
             await _enderecoRepository.Update(endereco);
         }
@@ -60,7 +60,7 @@ namespace DevIO.Business.Services
         {
             if (_fornecedorRepository.ObterFornecedorProdutosEndereco(id).Result.Produtos.Any())
             {
-                Notificar("O fornecedor possui produtos cadastrados!");
+                Notify("O fornecedor possui produtos cadastrados!");
                 return false;
             }
 
