@@ -15,15 +15,18 @@ namespace DevIO.Api.Controllers
         private readonly ITradeRepository _tradeRepository;
         private readonly ITradeService _tradeService;
         private readonly IMapper _mapper;
+        private readonly ICategoryRepository _categoryRepository;
 
-        public TradesController(ITradeRepository tradeRepository, 
-                                IMapper mapper, 
+        public TradesController(ITradeRepository tradeRepository,
+                                IMapper mapper,
                                 ITradeService tradeService,
+                                ICategoryRepository categoryRepository,
                                 INotifier notificador) : base(notificador)
         {
             _tradeRepository = tradeRepository;
             _mapper = mapper;
             _tradeService = tradeService;
+            _categoryRepository = categoryRepository;
         }
 
         [HttpGet]
@@ -45,16 +48,34 @@ namespace DevIO.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<TradeViewModel>> Add(TradeViewModel tradeViewModel)
         {
-            if (!ModelState.IsValid) return CustomResponse(ModelState);
+            try
+            {
+                if (!ModelState.IsValid) return CustomResponse(ModelState);
 
-            //if(tradeViewModel.Value >= 1000000 && tradeViewModel.Sector.Description == "Public")
-            //{
-            //    tradeViewModel.Category = 
-            //}
+                if (tradeViewModel.Value >= 1000000 && tradeViewModel.Sector.Description == "Public")
+                {
+                    tradeViewModel.Category = await _categoryRepository.GetCategoryByInitials("B");
+                }
+                else if (tradeViewModel.Value >= 1000000 && tradeViewModel.Sector.Description == "Private")
+                {
+                    tradeViewModel.Category = await _categoryRepository.GetCategoryByInitials("C");
+                }
+                else
+                {
+                    tradeViewModel.Category = await _categoryRepository.GetCategoryByInitials("A");
+                }
 
-            await _tradeService.Add(_mapper.Map<Trade>(tradeViewModel));
+                //await _tradeService.Add(_mapper.Map<Trade>(tradeViewModel));
 
-            return CustomResponse(tradeViewModel);
+                await _tradeRepository.AddTradeWithSector(_mapper.Map<Trade>(tradeViewModel));
+
+                return CustomResponse(tradeViewModel);
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.ToString());
+            }
         }
 
         [HttpPut("{id:guid}")]

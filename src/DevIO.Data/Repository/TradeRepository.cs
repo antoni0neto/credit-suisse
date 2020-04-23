@@ -49,5 +49,15 @@ namespace DevIO.Data.Repository
                 .ToListAsync();
         }
 
+        public async Task<Trade> AddTradeWithSector(Trade trade)
+        {
+            Db.Entry(trade.Sector).State = EntityState.Unchanged;
+            Db.Entry(trade.Category).State = EntityState.Unchanged;
+            var newTrade = Db.Add(trade);
+            Db.SaveChanges();
+
+            return newTrade.Entity;
+        }
+
     }
 }

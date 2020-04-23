@@ -11,5 +11,6 @@ namespace DevIO.Business.Intefaces
         Task<Trade> GetByIdTradeSectorCategory(Guid id);
         Task<List<Trade>> GetTradesBySector(Guid sectorId);
         Task<List<Trade>> GetTradesByCategory(Guid categoryId);
+        Task<Trade> AddTradeWithSector(Trade trade);
     }
 }
