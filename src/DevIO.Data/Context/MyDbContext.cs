@@ -12,6 +12,7 @@ namespace DevIO.Data.Context
         public MyDbContext(DbContextOptions options) : base(options) { }
 
         public DbSet<Trade> Trades { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -9,6 +9,7 @@ namespace DevIO.Api.Configuration
         public AutomapperConfig()
         {
             CreateMap<Trade, TradeViewModel>().ReverseMap();
+            CreateMap<Category, CategoryViewModel>().ReverseMap();
         }
     }
 }
