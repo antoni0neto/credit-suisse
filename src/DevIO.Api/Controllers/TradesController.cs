@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DevIO.Api.Controllers
 {
-    [Route("api/tradees")]
+    [Route("api/trades")]
     public class TradesController : MainController
     {
         private readonly ITradeRepository _tradeRepository;
@@ -29,7 +29,8 @@ namespace DevIO.Api.Controllers
         [HttpGet]
         public async Task<IEnumerable<TradeViewModel>> GetAll()
         {
-            return _mapper.Map<IEnumerable<TradeViewModel>>(await _tradeRepository.GetAll());
+            var mapper = _mapper.Map<IEnumerable<TradeViewModel>>(await _tradeRepository.GetAll());
+            return mapper;
         }
 
         [HttpGet("{id:guid}")]

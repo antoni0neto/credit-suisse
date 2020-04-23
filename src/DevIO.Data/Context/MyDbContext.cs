@@ -11,9 +11,6 @@ namespace DevIO.Data.Context
     {
         public MyDbContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<Produto> Produtos { get; set; }
-        public DbSet<Endereco> Enderecos { get; set; }
-        public DbSet<Fornecedor> Fornecedores { get; set; }
         public DbSet<Trade> Trades { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
