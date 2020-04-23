@@ -13,10 +13,6 @@ namespace DevIO.Data.Mappings
             builder.Property(c => c.Value)
                 .IsRequired();
 
-            builder.Property(c => c.ClientSector)
-                .IsRequired()
-                .HasColumnType("varchar(150)");
-
             builder.ToTable("Trades");
         }
     }

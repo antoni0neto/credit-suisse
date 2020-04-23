@@ -29,14 +29,13 @@ namespace DevIO.Api.Controllers
         [HttpGet]
         public async Task<IEnumerable<TradeViewModel>> GetAll()
         {
-            var mapper = _mapper.Map<IEnumerable<TradeViewModel>>(await _tradeRepository.GetAll());
-            return mapper;
+            return _mapper.Map<IEnumerable<TradeViewModel>>(await _tradeRepository.GetAllTradeSectorCategory());
         }
 
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<TradeViewModel>> GetById(Guid id)
         {
-            var trade = await GetById(id);
+            var trade = _mapper.Map<TradeViewModel>(await _tradeRepository.GetByIdTradeSectorCategory(id));
 
             if (trade == null) return NotFound();
 
@@ -47,6 +46,11 @@ namespace DevIO.Api.Controllers
         public async Task<ActionResult<TradeViewModel>> Add(TradeViewModel tradeViewModel)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
+
+            //if(tradeViewModel.Value >= 1000000 && tradeViewModel.Sector.Description == "Public")
+            //{
+            //    tradeViewModel.Category = 
+            //}
 
             await _tradeService.Add(_mapper.Map<Trade>(tradeViewModel));
 
@@ -79,6 +83,24 @@ namespace DevIO.Api.Controllers
             await _tradeService.Remove(id);
 
             return CustomResponse(tradeViewModel);
+        }
+
+        [HttpGet("GetByIdTradeSectorCategory/{id}")]
+        public async Task<TradeViewModel> GetByIdTradeSectorCategory(Guid id)
+        {
+            return _mapper.Map<TradeViewModel>(await _tradeRepository.GetByIdTradeSectorCategory(id));
+        }
+
+        [HttpGet("GetTradesBySector/{sectorId}")]
+        public async Task<TradeViewModel> GetTradesBySector(Guid sectorId)
+        {
+            return _mapper.Map<TradeViewModel>(await _tradeRepository.GetTradesBySector(sectorId));
+        }
+
+        [HttpGet("GetTradesByCategory/{categoryId}")]
+        public async Task<TradeViewModel> GetTradesByCategory(Guid categoryId)
+        {
+            return _mapper.Map<TradeViewModel>(await _tradeRepository.GetTradesByCategory(categoryId));
         }
     }
 }

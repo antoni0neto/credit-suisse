@@ -4,14 +4,16 @@ using DevIO.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DevIO.Data.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200423152059_RelationshipCategoryAndTrade")]
+    partial class RelationshipCategoryAndTrade
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,26 +33,9 @@ namespace DevIO.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(2)");
 
-                    b.Property<Guid?>("SectorId");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("SectorId");
 
                     b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("DevIO.Business.Models.Sector", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Description")
-                        .HasColumnType("varchar(200)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Sectors");
                 });
 
             modelBuilder.Entity("DevIO.Business.Models.Trade", b =>
@@ -60,7 +45,9 @@ namespace DevIO.Data.Migrations
 
                     b.Property<Guid?>("CategoryId");
 
-                    b.Property<Guid?>("SectorId");
+                    b.Property<string>("ClientSector")
+                        .IsRequired()
+                        .HasColumnType("varchar(150)");
 
                     b.Property<double>("Value");
 
@@ -68,16 +55,7 @@ namespace DevIO.Data.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("SectorId");
-
                     b.ToTable("Trades");
-                });
-
-            modelBuilder.Entity("DevIO.Business.Models.Category", b =>
-                {
-                    b.HasOne("DevIO.Business.Models.Sector", "Sector")
-                        .WithMany()
-                        .HasForeignKey("SectorId");
                 });
 
             modelBuilder.Entity("DevIO.Business.Models.Trade", b =>
@@ -85,10 +63,6 @@ namespace DevIO.Data.Migrations
                     b.HasOne("DevIO.Business.Models.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId");
-
-                    b.HasOne("DevIO.Business.Models.Sector", "Sector")
-                        .WithMany()
-                        .HasForeignKey("SectorId");
                 });
 #pragma warning restore 612, 618
         }

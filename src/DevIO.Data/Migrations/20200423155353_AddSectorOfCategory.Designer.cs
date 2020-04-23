@@ -4,14 +4,16 @@ using DevIO.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DevIO.Data.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200423155353_AddSectorOfCategory")]
+    partial class AddSectorOfCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,6 +61,10 @@ namespace DevIO.Data.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<Guid?>("CategoryId");
+
+                    b.Property<string>("ClientSector")
+                        .IsRequired()
+                        .HasColumnType("varchar(150)");
 
                     b.Property<Guid?>("SectorId");
 

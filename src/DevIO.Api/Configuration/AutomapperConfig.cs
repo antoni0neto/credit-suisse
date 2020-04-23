@@ -10,6 +10,7 @@ namespace DevIO.Api.Configuration
         {
             CreateMap<Trade, TradeViewModel>().ReverseMap();
             CreateMap<Category, CategoryViewModel>().ReverseMap();
+            CreateMap<Sector, SectorViewModel>().ReverseMap();
         }
     }
 }

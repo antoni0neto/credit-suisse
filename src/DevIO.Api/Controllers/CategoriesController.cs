@@ -36,7 +36,7 @@ namespace DevIO.Api.Controllers
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<CategoryViewModel>> GetById(Guid id)
         {
-            var category = await GetById(id);
+            var category = _mapper.Map<CategoryViewModel>(await _categoryRepository.GetById(id));
 
             if (category == null) return NotFound();
 

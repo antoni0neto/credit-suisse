@@ -4,10 +4,8 @@ using System.Text;
 
 namespace DevIO.Business.Models
 {
-    public class Category : Entity
+    public class Sector : Entity
     {
-        public string Initials { get; set; }
         public string Description { get; set; }
-        public Sector Sector { get; set; }
     }
 }

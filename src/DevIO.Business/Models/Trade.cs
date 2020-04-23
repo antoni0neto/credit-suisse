@@ -7,6 +7,7 @@ namespace DevIO.Business.Models
     public class Trade : Entity
     {
         public double Value { get; set; }
-        public string ClientSector { get; set; }
+        public Sector Sector { get; set; }
+        public Category Category { get; set; }
     }
 }
